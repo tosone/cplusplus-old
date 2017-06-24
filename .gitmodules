@@ -1,6 +1,24 @@
 [submodule "JsoncppLearning/jsoncpp"]
 	path = JsoncppLearning/jsoncpp
 	url = https://github.com/open-source-parsers/jsoncpp.git
-[submodule "BoostLearning/uuid"]
-	path = BoostLearning/uuid
-	url = https://github.com/boostorg/uuid.git
+[submodule "BoostLearning/boost"]
+	path = BoostLearning/boost
+	url = https://github.com/boostorg/boost.git
+[submodule "OpensslLearning/openssl"]
+	path = OpensslLearning/openssl
+	url = https://github.com/openssl/openssl.git
+[submodule "LibuvLearning/libuv"]
+	path = LibuvLearning/libuv
+	url = https://github.com/libuv/libuv.git
+[submodule "LibuvLearning/curl"]
+	path = LibuvLearning/curl
+	url = https://github.com/curl/curl.git
+[submodule "LibuvLearning/zlib"]
+	path = LibuvLearning/zlib
+	url = https://github.com/madler/zlib.git
+[submodule "CryptoLearning/tiny-AES128-C"]
+	path = CryptoLearning/tiny-AES128-C
+	url = https://github.com/kokke/tiny-AES128-C.git
+[submodule "JsonparserLearning/json-parser"]
+	path = JsonparserLearning/json-parser
+	url = https://github.com/udp/json-parser.git

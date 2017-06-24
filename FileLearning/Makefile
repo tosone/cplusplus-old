@@ -1,5 +1,5 @@
-FLAGS = -O2 -std=c++11 -s -w
 CXX = g++
+FLAGS = -O3 -std=c++11
 
 all: clean
 	for file in *.cpp; do ${CXX} ${FLAGS} -o `echo $$file | cut -d. -f1`.test $$file; done

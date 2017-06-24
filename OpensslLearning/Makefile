@@ -1,11 +1,13 @@
 CXX = g++
 FLAGS = -O3 -std=c++11
-INCLUDE = -I./jsoncpp/include
-LIBS = ./jsoncpp/src/lib_json/libjsoncpp.a
+INCLUDE = -I./openssl/include
+LIBS = ./openssl/libcrypto.a ./openssl/libssl.a
 
 all: clean
-	make -C jsoncpp
 	for file in *.cpp; do ${CXX} ${FLAGS} ${INCLUDE} ${LIBS} -o `echo $$file | cut -d. -f1`.test $$file; done
 
 clean:
 	for file in *.cpp; do if [[ -f `echo $$file | cut -d. -f1`.test ]]; then rm `echo $$file | cut -d. -f1`.test; fi done
+
+depend:
+	cd openssl && ./config && make depend && make
