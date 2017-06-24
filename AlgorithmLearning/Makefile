@@ -1,4 +1,4 @@
-FLAGS = -O2 -std=c++11
+FLAGS = -O2 -std=c++11 -s -w
 CXX = g++
 
 all: clean
