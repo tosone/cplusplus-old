@@ -1,3 +1,6 @@
 [submodule "JsoncppLearning/jsoncpp"]
 	path = JsoncppLearning/jsoncpp
 	url = https://github.com/open-source-parsers/jsoncpp.git
+[submodule "BoostLearning/uuid"]
+	path = BoostLearning/uuid
+	url = https://github.com/boostorg/uuid.git

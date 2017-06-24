@@ -1,4 +1,4 @@
-FLAGS = -O2 -std=c++11
+FLAGS = -O2 -std=c++11 -I./uuid/include
 CXX = g++
 
 all: clean
