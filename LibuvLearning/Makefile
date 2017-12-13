@@ -10,7 +10,7 @@ all: clean
 clean:
 	for file in *.cpp; do if [[ -f `echo $$file | cut -d. -f1`.test ]]; then rm `echo $$file | cut -d. -f1`.test; fi done
 
-build:
+depend:
 	cd libuv && ./autogen.sh && ./configure && make && cd .. && \
 	cd curl && ./buildconf && ./configure && make && cd .. && \
 	cd zlib && ./configure && make
