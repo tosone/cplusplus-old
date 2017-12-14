@@ -10,4 +10,4 @@
 
 ### 更新依赖
 
-- `git submodule fireach git pull origin master`
+- `git submodule foreach git pull origin master`
