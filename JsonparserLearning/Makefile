@@ -1,19 +1,13 @@
 CC = gcc
 FLAGS = -O2 -std=c99
-INCLUDE = -I./json-parser
-LIBS = ./json-parser/libjsonparser.a
-
-UNAME_S = $(shell uname -s)
-
-ifeq ($(UNAME_S),Darwin)
-	CC = gcc-7
-endif
+INCLUDE = -I../3rdParty/json-parser
+LIBS = -L../3rdParty/json-parser -ljsonparser -lm -static
 
 all: clean
-	${CC} ${FLAGS} ${INCLUDE} ${LIBS} -o example.test example.c
+	${CC} ${FLAGS} ${INCLUDE} -o example.test example.c ${LIBS}
 
 clean:
-	-rm *.test
+	$(RM) *.test
 
 depend:
-	cd json-parser && ./configure && make
+	cd ../3rdParty/json-parser && ./configure && make
