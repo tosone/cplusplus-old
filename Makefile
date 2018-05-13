@@ -5,7 +5,7 @@ clean:
 	-rm */*.txt */*.test */*.o */*.html
 
 submodule:
-	git submodule update --init
+	git submodule update --init --recursive
 
 tools:
 	# brew install automake

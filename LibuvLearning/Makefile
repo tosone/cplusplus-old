@@ -1,6 +1,6 @@
 FLAGS = -O3
 INCLUDE = -I../3rdParty/libuv/include -I../3rdParty/curl/include -I../3rdParty/zlib
-LIBS = ../3rdParty/libuv/.libs/libuv.a ../3rdParty/curl/lib/.libs/libcurl.a ../3rdParty/zlib/libz.a -lldap
+LIBS = -L../3rdParty/openssl/ -lcrypto -lssl -L../3rdParty/libuv/.libs/ -luv -L../3rdParty/curl/lib/.libs/ -lcurl -L../3rdParty/zlib/ -lz -L../3rdParty/openldap/libraries/libldap/.libs/ -lldap
 
 CXX = g++
 
@@ -11,6 +11,7 @@ clean:
 	for file in *.cpp; do if [ -f `echo $$file | cut -d. -f1`.test ]; then rm `echo $$file | cut -d. -f1`.test; fi done
 
 depend:
-	cd ../3rdParty/libuv && ./autogen.sh && ./configure && make && cd .. && \
-	cd ../3rdParty/curl && ./buildconf && ./configure && make && cd .. && \
+	cd ../3rdParty/openldap && ./configure && make depend && make
+	cd ../3rdParty/libuv && ./autogen.sh && ./configure && make
+	cd ../3rdParty/curl && ./buildconf && ./configure && make
 	cd ../3rdParty/zlib && ./configure && make

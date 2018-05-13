@@ -1,7 +1,7 @@
 CXX = g++
 FLAGS = -O3 -std=c++11
 INCLUDE = -I./openssl/include
-LIBS = ../3rdParty/openssl/libcrypto.a ../3rdParty/openssl/libssl.a
+LIBS = -L../3rdParty/openssl/ -lcrypto -lssl -lpthread -ldl
 
 all: clean
 	for file in *.cpp; do ${CXX} ${FLAGS} ${INCLUDE} -o `echo $$file | cut -d. -f1`.test $$file ${LIBS}; done

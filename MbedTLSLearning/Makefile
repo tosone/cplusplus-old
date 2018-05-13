@@ -1,7 +1,7 @@
 CXX = g++
 FLAGS = -O3 -std=c++11
 INCLUDE = -I../3rdParty/mbedTLS/include
-LIBS = ../3rdParty/mbedTLS/library/libmbedcrypto.a ../3rdParty/mbedTLS/library/libmbedtls.a ../3rdParty/mbedTLS/library/libmbedx509.a
+LIBS = -L../3rdParty/mbedTLS/library/ -lmbedcrypto -lmbedtls -lmbedx509
 
 all: clean
 	@for file in *.cpp; do ${CXX} ${FLAGS} ${INCLUDE} -o `echo $$file | cut -d. -f1`.test $$file ${LIBS}; done

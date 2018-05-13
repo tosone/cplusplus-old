@@ -1,5 +1,6 @@
 #include <assert.h>
 #include <iostream>
+#include <cstring>
 #include <openssl/aes.h>
 #include <openssl/bio.h>
 #include <openssl/err.h>
