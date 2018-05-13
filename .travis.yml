@@ -1,7 +1,12 @@
 language: cpp
 
-compiler: gcc
+compiler: cpp
+
+install:
+  - sudo apt-get install -y automake
+  - sudo apt-get install -y libtool
 
 script:
-    - make submodule
-    - make -C OpensslLearning depend && make -C OpensslLearning
+  - make submodule
+  - make depend
+  - make
