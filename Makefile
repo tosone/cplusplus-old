@@ -12,8 +12,13 @@ all: clean
 clean:
 	${RM} */*.txt */*.test */*.o */*.html
 
+upgrade:
+	git submodule foreach git pull origin master
+.PHONY: upgrade
+
 submodule:
 	git submodule update --init --recursive
+.PHONY: submodule
 
 depend:
 	cd 3rdParty/boost && ./bootstrap.sh && ./b2
@@ -25,3 +30,4 @@ depend:
 	cd 3rdParty/zlib && ./configure && make
 	cd 3rdParty/mbedTLS && make
 	cd 3rdParty/openssl && ./config && make depend && make
+.PHONY: depend
