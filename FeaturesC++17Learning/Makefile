@@ -1,5 +1,5 @@
 CXX   = g++
-FLAGS = -O2 -std=c++17 -Wall -pedantic -pthread
+FLAGS = -O2 -std=c++17 -Wall -pedantic -pthread -static
 
 all:
-	for file in *.cpp; do ${CXX} ${FLAGS} -o `echo $$file | cut -d. -f1`.test $$file; done
+	@for file in *.cpp; do ${CXX} ${FLAGS} -o `echo $$file | cut -d. -f1`.test $$file; done
