@@ -1,28 +1,28 @@
-[submodule "JsoncppLearning/jsoncpp"]
+[submodule "3rdParty/jsoncpp"]
 	path = 3rdParty/jsoncpp
 	url = https://github.com/open-source-parsers/jsoncpp.git
-[submodule "BoostLearning/boost"]
+[submodule "3rdParty/boost"]
 	path = 3rdParty/boost
 	url = https://github.com/boostorg/boost.git
-[submodule "OpensslLearning/openssl"]
+[submodule "3rdParty/openssl"]
 	path = 3rdParty/openssl
 	url = https://github.com/openssl/openssl.git
-[submodule "LibuvLearning/libuv"]
+[submodule "3rdParty/libuv"]
 	path = 3rdParty/libuv
 	url = https://github.com/libuv/libuv.git
-[submodule "LibuvLearning/curl"]
+[submodule "3rdParty/curl"]
 	path = 3rdParty/curl
 	url = https://github.com/curl/curl.git
-[submodule "LibuvLearning/zlib"]
+[submodule "3rdParty/zlib"]
 	path = 3rdParty/zlib
 	url = https://github.com/madler/zlib.git
-[submodule "CryptoLearning/tiny-AES128-C"]
+[submodule "3rdParty/tiny-AES128-C"]
 	path = 3rdParty/tiny-AES128-C
 	url = https://github.com/kokke/tiny-AES128-C.git
-[submodule "JsonparserLearning/json-parser"]
+[submodule "3rdParty/json-parser"]
 	path = 3rdParty/json-parser
 	url = https://github.com/udp/json-parser.git
-[submodule "MbedTLSLearning/mbedTLS"]
+[submodule "3rdParty/mbedTLS"]
 	path = 3rdParty/mbedTLS
 	url = https://github.com/ARMmbed/mbedtls.git
 [submodule "3rdParty/openldap"]

@@ -1,8 +1,7 @@
+#include <json.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/stat.h>
-
-#include "json.h"
 
 /*
  * Test for json.c

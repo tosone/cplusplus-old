@@ -20,13 +20,13 @@
  */
 
 #if !defined(MBEDTLS_CONFIG_FILE)
-#include "mbedtls/config.h"
+#include <mbedtls/config.h>
 #else
 #include MBEDTLS_CONFIG_FILE
 #endif
 
 #if defined(MBEDTLS_PLATFORM_C)
-#include "mbedtls/platform.h"
+#include <mbedtls/platform.h>
 #else
 #include <stdio.h>
 #define mbedtls_exit exit
@@ -42,36 +42,34 @@ int main(void) {
 }
 #else
 
+#include <mbedtls/aes.h>
+#include <mbedtls/arc4.h>
+#include <mbedtls/blowfish.h>
+#include <mbedtls/camellia.h>
+#include <mbedtls/ccm.h>
+#include <mbedtls/cmac.h>
+#include <mbedtls/ctr_drbg.h>
+#include <mbedtls/des.h>
+#include <mbedtls/dhm.h>
+#include <mbedtls/ecdh.h>
+#include <mbedtls/ecdsa.h>
+#include <mbedtls/error.h>
+#include <mbedtls/gcm.h>
+#include <mbedtls/havege.h>
+#include <mbedtls/hmac_drbg.h>
+#include <mbedtls/md4.h>
+#include <mbedtls/md5.h>
+#include <mbedtls/ripemd160.h>
+#include <mbedtls/rsa.h>
+#include <mbedtls/sha1.h>
+#include <mbedtls/sha256.h>
+#include <mbedtls/sha512.h>
+#include <mbedtls/timing.h>
 #include <stdlib.h>
 #include <string.h>
 
-#include "mbedtls/timing.h"
-
-#include "mbedtls/aes.h"
-#include "mbedtls/arc4.h"
-#include "mbedtls/blowfish.h"
-#include "mbedtls/camellia.h"
-#include "mbedtls/ccm.h"
-#include "mbedtls/cmac.h"
-#include "mbedtls/ctr_drbg.h"
-#include "mbedtls/des.h"
-#include "mbedtls/dhm.h"
-#include "mbedtls/ecdh.h"
-#include "mbedtls/ecdsa.h"
-#include "mbedtls/error.h"
-#include "mbedtls/gcm.h"
-#include "mbedtls/havege.h"
-#include "mbedtls/hmac_drbg.h"
-#include "mbedtls/md4.h"
-#include "mbedtls/md5.h"
-#include "mbedtls/ripemd160.h"
-#include "mbedtls/rsa.h"
-#include "mbedtls/sha1.h"
-#include "mbedtls/sha256.h"
-#include "mbedtls/sha512.h"
-
 #if defined(MBEDTLS_MEMORY_BUFFER_ALLOC_C)
-#include "mbedtls/memory_buffer_alloc.h"
+#include <mbedtls/memory_buffer_alloc.h>
 #endif
 
 /*

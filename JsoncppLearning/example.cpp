@@ -1,12 +1,11 @@
 #include <chrono>
 #include <fstream>
 #include <iostream>
+#include <json/json.h>
 #include <numeric>
 #include <random>
 #include <sstream>
 #include <string>
-
-#include <json/json.h>
 
 using namespace std;
 
