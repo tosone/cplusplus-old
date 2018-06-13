@@ -17,7 +17,7 @@ submodule:
 
 depend:
 	cd 3rdParty/boost && ./bootstrap.sh && ./b2
-	mkdir 3rdParty/jsoncpp/build && cd 3rdParty/jsoncpp/build && cmake -DCMAKE_BUILD_TYPE=release -DBUILD_STATIC_LIBS=ON -DBUILD_SHARED_LIBS=OFF -DARCHIVE_INSTALL_DIR=. -G "Unix Makefiles" .. && make
+	if [ -d 3rdParty/jsoncpp/build ]; then cd 3rdParty/jsoncpp/build; else mkdir 3rdParty/jsoncpp/build && cd 3rdParty/jsoncpp/build; fi && cmake -DCMAKE_BUILD_TYPE=release -DBUILD_STATIC_LIBS=ON -DBUILD_SHARED_LIBS=OFF -DARCHIVE_INSTALL_DIR=. -G "Unix Makefiles" .. && make
 	cd 3rdParty/json-parser && ./configure && make
 	cd 3rdParty/openldap && ./configure && make depend && make
 	cd 3rdParty/libuv && ./autogen.sh && ./configure && make
